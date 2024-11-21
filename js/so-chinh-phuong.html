@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Cách 1: Dùng hàm
+      // let n = Number(prompt('Nhập n để kiểm tra số chính phương: '))
+      // let result = ''
+      // if(n < 1){
+      //     result = `${n} không là số chính phương`
+      // }else{
+      //     let canN = Math.sqrt(n)
+      //     if(Math.floor(canN) === canN){
+      //         result = `${n} là số chính phương`
+      //     }else{
+      //         result = `${n} không là số chính phương`
+      //     }
+      // }
+      // alert(result)
+
+      //Cách 2: Dùng vòng lặp
+      let n = Number(prompt("Nhập n để kiểm tra số chính phương: "));
+      let result = "";
+      if (n < 0) {
+        result = `${n} không là số chính phương`;
+      } else {
+        for (let i = 0; i * i <= n; i++) {
+          result =
+            i * i === n
+              ? `${n} là số chính phương`
+              : `${n} không là số chính phương`;
+        }
+      }
+      alert(result);
+    </script>
+  </body>
+</html>

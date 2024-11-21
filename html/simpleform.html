@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .required::after {
+            content: "*";
+            color: red;
+        }
+
+        .phoneNumber {
+            width: 40px;
+            display: inline-flex;
+        }
+
+        form {
+            border: 2px solid cornflowerblue;
+            width: 28%;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        select {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+<form style="font-family: Lucida Grande">
+    <h2>Order Form</h2>
+    <h5>What would you like to buy?</h5>
+    <select name="likeToBuy">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <h5>How many would you like to order?</h5>
+    <label><input type="radio"/>1 - $10</label><br>
+    <label><input type="radio"/>2 - $20</label><br>
+    <label><input type="radio"/>3 - $25</label>
+    <h5 class="required">Name</h5>
+    <input name="name" type="text" value="FirstName " required>
+    <input name="name" type="text" value="LastName" required><br>
+    <h5>Email</h5>
+    <input type="email"><br>
+    <h5>Phone Number</h5>
+    <input class="phoneNumber" type="number"> -
+    <input class="phoneNumber" type="number"> -
+    <input class="phoneNumber" type="number"><br>
+    <p></p>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Cách 1: định nghĩa function (viết như constructor, gồm thuộc tính, hàm)
+        // let GetDay= function (day, month, year) {
+        //     this.day = day;
+        //     this.month = month;
+        //     this.year = year;
+        //     this.getDay = function (){
+        //         return (this.day + "/" + this.month + "/" + this.year);
+        //     }
+        // }
+        
+        //Cách 2: xài class
+        class GetDay{
+            constructor(day, month, year) {
+                 this.day = day;
+                 this.month = month;
+                 this.year = year;
+            }
+            getDay(){
+                return (this.day + "/" + this.month + "/" + this.year);
+            }
+        }
+        var toDay = new GetDay(15, 11, 2024);
+        alert(toDay.getDay());
+    </script>
+</body>
+</html>

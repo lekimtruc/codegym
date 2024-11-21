@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <style>
+    table{
+      width: 100%;
+    }
+    tr, td{
+      text-align: center;
+    }
+    table, tr, td{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let content = "<table>";
+    for(let i=1; i<=9; i++){
+      content += "<tr>"
+      for(let j=2; j<=9; j++){
+        content += `<td>${j} x ${i} = ${i*j}</td>`;
+      }
+      content += "</tr>";
+    }
+    content += "</table>";
+    document.write(content)
+  </script>
+</body>
+</html>
