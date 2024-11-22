@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc
+bằng tham số thứ hai, trả về tổng của hai tham số.-->
+<script>
+    function kiemTraThamSo(a, b){
+        let result = ''
+        if (a>b){
+            result = `a > b`
+        }else{
+            result = `Tổng a và b: ${a+b}`
+        }
+        return alert(result)
+    }
+    a = Number(prompt('Nhập số a: '))
+    b = Number(prompt('Nhập số b: '))
+    kiemTraThamSo(a, b)
+</script>
+</body>
+</html>
