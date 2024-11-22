@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--ngôi sao : Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus.
+chòm sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major, Leo-->
+<p id="timSao"></p>
+
+<script>
+    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    let result = ''
+
+    function timChomSao(str) {
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (str === ngoiSao[i]) {
+                return result = chomSao[i]
+            }
+        }
+        return result = 'Không tìm thấy sao'
+    }
+
+    str = prompt('Nhập vào ngôi sao: ')
+    document.getElementById('timSao').innerHTML = timChomSao(str)
+</script>
+</body>
+</html>

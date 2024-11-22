@@ -11,20 +11,15 @@
 <!--Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại
 giá trị cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị
 kết quả lên màn hình.-->
-<script>
-    function tangLen1() {
-        number = Number(prompt('Nhập 1 số: '))
-        console.log(result)
-        return result = number++
+<p id="result"></p>
 
+<script>
+    function tangLen1(number) {
+        return ++number
     }
 
-    // window.addEventListener('keydown', tangLen1())
-
-    window.addEventListener("load", function () {
-        document.getElementById("result").textContent = tangLen1()
-    });
+    number = Number(prompt('Nhập 1 số: '))
+    document.getElementById("result").innerHTML = tangLen1(number)
 </script>
-<p id="result"></p>
 </body>
 </html>
