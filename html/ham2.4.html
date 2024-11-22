@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p id="bai1"></p>
+<p id="bai2"></p>
+<p id="bai3"></p>
+<p id="bai4"></p>
+<p id="bai5"></p>
+<p id="bai6"></p>
+<p id="bai7"></p>
+<p id="bai8"></p>
+<p id="bai9"></p>
+<!--Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<script>
+    function tinhBinhPhuong(a) {
+        return `Bình phương của ${a}: ${a * a}`
+    }
+
+    a = Number(prompt('Nhập số để tính bình phương: '))
+    document.getElementById('bai1').innerHTML = tinhBinhPhuong(a)
+</script>
+
+<!--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+<script>
+    function dienTichVaChuViHinhTron(r) {
+        return `Diện tích hình tròn: ${r * r * 3.14}, Chu vi: ${3.14 * 2 * r}`
+    }
+
+    r = Number(prompt('Nhập r để tính diện tích, chu vi hình tròn: '))
+    document.getElementById('bai2').innerHTML = dienTichVaChuViHinhTron(r)
+</script>
+
+<!--Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<script>
+    function tinhGiaiThua(b) {
+        var result = 1
+        if (b === 0) {
+            return 1
+        } else if (b > 0) {
+            for (let i = 1; i < b; i++) {
+                result *= (i + 1)
+            }
+            return result
+        } else {
+            return 'Số âm không có giai thừa'
+        }
+    }
+
+    b = Number(prompt('Nhập số để tính giai thừa: '))
+    document.getElementById('bai3').innerHTML = tinhGiaiThua(b)
+</script>
+
+<!--Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.-->
+<script>
+    function isNumber(c) {
+        number = Number(c)
+        return `${c} là số: ${!isNaN(number)}`
+    }
+    c = prompt('Nhập kí tự bất kỳ để kiểm tra có phải là số không: ')
+    document.getElementById('bai4').innerHTML = isNumber(c)
+</script>
+
+<!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    function soNguyenNhoNhat(d, e, f) {
+        if (d < e && d < f) {
+            return `${d} là số nhỏ nhất`
+        } else if (e < f && e < f) {
+            return `${e} là số nhỏ nhất`
+        } else if (f < d && f < e) {
+            return `${f} là số nhỏ nhất`
+        }
+    }
+
+    d = Number(prompt('Nhập 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất, số nguyên thứ nhất: '))
+    e = Number(prompt('Nhập số nguyên thứ hai: '))
+    f = Number(prompt('Nhập số nguyên thứ ba: '))
+    document.getElementById('bai5').innerHTML = soNguyenNhoNhat(d, e, f)
+</script>
+
+<!--Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.-->
+<script>
+    function kiemTraSoNguyenDuong(g) {
+        return `${g} là số nguyên dương: ${(g > 0 && Math.floor(g) === g)}`
+    }
+
+    g = Number(prompt('Nhập số để kiểm tra số nguyên dương: '))
+    document.getElementById('bai6').innerHTML = kiemTraSoNguyenDuong(g)
+</script>
+
+<!--Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+<script>
+    function swap(h, i) {
+        let temp = 0
+        temp = h
+        h = i
+        i = temp
+        return `Sau khi đổi chỗ: h = ${h}, i = ${i}`
+    }
+
+    h = Number(prompt('Nhập 2 số để đổi chỗ, số thứ nhất h: '))
+    i = Number(prompt('Nhập 2 số để đổi chỗ, số thứ hai i: '))
+    document.getElementById('bai7').innerHTML = swap(h, i)
+
+</script>
+
+<!--Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.-->
+<script>
+    function daoNguocMang(arr) {
+        let arr1 = []
+        for (let i = arr.length - 1; i >= 0; i--) {
+            arr1.push(arr[i])
+        }
+        return `Mảng sau khi dảo ngược: ${arr1}`
+    }
+
+    data = prompt('Nhập mảng các số, cách nhau dấu phẩy để đảo ngược mảng: ')
+    arr = data.split(',').map(Number)
+    document.getElementById('bai8').innerHTML = daoNguocMang(arr)
+</script>
+
+<!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có
+nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+<script>
+    function kiemTraKyTuTrongMang(arr2, char) {
+        let count = 0
+        for (let i = 0; i < arr2.length; i++) {
+            if (char === arr2[i]) {
+                count++
+            }
+        }
+        if (count === 0) {
+            return -1
+        } else {
+            return count
+        }
+    }
+    arr2 = prompt('Nhập mảng các ký tự, cách nhau dấu phẩy: ')
+    char = prompt('Nhập 1 ký tự để kiểm tra có trong mảng không: ')
+    document.getElementById('bai9').innerHTML = kiemTraKyTuTrongMang(arr2, char)
+</script>
+</body>
+</html>
