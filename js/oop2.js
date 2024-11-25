@@ -21,16 +21,18 @@ class Circle {
         this._color = value;
     }
 
-    Circle(){
+    Circle() {
 
     }
-    getArea(){
+
+    getArea() {
         let S = Math.PI * this._radius * this._radius
         return S
     }
 }
+
 let c = new Circle(2, 'red');
 let r = c.radius; // 2
 
 let area = c.getArea(); // 12.566370614359172
-alert("radius: "  +r+ "; area: " + area);
+alert("radius: " + r + "; area: " + area);
