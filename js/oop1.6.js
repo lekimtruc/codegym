@@ -81,10 +81,14 @@ class Mobile{
 //     Có chức năng nhận tin nhắn từ một chiếc mobile khác.
 //     Có chức năng gửi tin nhắn tới một chiếc mobile khác.
     //mobile 1 gửi, mobile 2 nhận
-    guiVaNhanTinNhan(mobile1, mobile2, tn){
+    guiTinNhan(mobile1, mobile2, tn){
         mobile1._tnDaGui.push(tn)
+        return mobile1.xemTinDaGui()
+    }
+
+    nhanTinNhan(mobile1, mobil2, tn){
         mobile2._tnDaNhan.push(tn)
-        return [mobile1.xemTinDaGui(), mobile2.xemTinNhan()]
+        document.getElementById('nhanTinNhan').innerHTML = mobile2.xemTinNhan()
     }
 
 //     Có chức năng xem tin trong hộp thư đến.
@@ -99,6 +103,10 @@ class Mobile{
 }
 //     Sau mỗi lần sử dụng một chức năng, năng lượng pin sẽ giảm đi một đơn vị.
 //     Các chức năng không thể hoạt động nếu điện thoại chưa bật.
+
+let tn = document.getElementById('guiTinNhan').value
+console.log(tn)
 let nokia = new Mobile(100, true);
 let iphone = new Mobile(50, true);
-console.log(nokia.guiVaNhanTinNhan(nokia, iphone, '2'))
+console.log(nokia.guiTinNhan(nokia, iphone, tn))
+console.log(iphone.nhanTinNhan(nokia, iphone, tn))
