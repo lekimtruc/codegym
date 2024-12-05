@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thực hành 2</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  let input = prompt('Nhập 2 phân số, cách nhau dấu ",": ')
+  let phanSo = input.split(',')
+  let arr = Number(phanSo)
+  function soSanhPhanSo(){
+      if(arr[0] === arr[1]){
+          return result = document.getElementById('result').innerHTML = 'True'
+      }else{
+          return result = document.getElementById('result').innerHTML = 'False'
+      }
+  }
+  soSanhPhanSo()
+</script>
+</body>
+</html>

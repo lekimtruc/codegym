@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thực hành 3</title>
+    <style>
+        table {
+            width: 50%;
+        }
+
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            border: 1px solid white;
+            border-collapse: collapse;
+            color: black;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<script>
+    class SoTietKiem {
+        constructor(maSo, loaiTietKiem, hoTenKhachHang, CMND, ngayMoSo, soTienGui) {
+            this._maSo = maSo;
+            this._loaiTietKiem = loaiTietKiem;
+            this._hoTenKhachHang = hoTenKhachHang;
+            this._CMND = CMND;
+            this._ngayMoSo = ngayMoSo;
+            this._soTienGui = soTienGui;
+        }
+
+        get maSo() {
+            return this._maSo;
+        }
+
+        set maSo(value) {
+            this._maSo = value;
+        }
+
+        get loaiTietKiem() {
+            return this._loaiTietKiem;
+        }
+
+        set loaiTietKiem(value) {
+            this._loaiTietKiem = value;
+        }
+
+        get hoTenKhachHang() {
+            return this._hoTenKhachHang;
+        }
+
+        set hoTenKhachHang(value) {
+            this._hoTenKhachHang = value;
+        }
+
+        get CMND() {
+            return this._CMND;
+        }
+
+        set CMND(value) {
+            this._CMND = value;
+        }
+
+        get ngayMoSo() {
+            return this._ngayMoSo;
+        }
+
+        set ngayMoSo(value) {
+            this._ngayMoSo = value;
+        }
+
+        get soTienGui() {
+            return this._soTienGui;
+        }
+
+        set soTienGui(value) {
+            this._soTienGui = value;
+        }
+    }
+
+    var danhSachStk = []
+    var soTietKiem1 = new SoTietKiem('stk01', 'loai1', 'Nguyen Van A', '123456789', '5/12/2024', 5000000)
+    var soTietKiem2 = new SoTietKiem('stk02', 'loai2', 'Tran Thi B', '987654321', '5/12/2024', 2000000)
+    var soTietKiem3 = new SoTietKiem('stk03', 'loai1', 'Phan Van C', '345216987', '5/12/2024', 28000000)
+    danhSachStk.push(soTietKiem1)
+    danhSachStk.push(soTietKiem2)
+    danhSachStk.push(soTietKiem3)
+
+</script>
+
+<p>Danh sách sổ tiết kiệm:</p>
+<table>
+    <tr>
+        <th>Mã số</th>
+        <th>Loại tiết kiệm</th>
+        <th>Họ tên</th>
+        <th>CMND</th>
+        <th>Ngày mở sổ</th>
+        <th>Số tiền gửi</th>
+    </tr>
+    <tr>
+        <td><script>danhSachStk[0]._maSo</script></td>
+        <td><script>danhSachStk[0]._loaiTietKiem</script></td>
+        <td><script>danhSachStk[0]._hoTenKhachHang</script></td>
+        <td><script>danhSachStk[0]._CMND</script></td>
+        <td><script>danhSachStk[0]._ngayMoSo</script></td>
+        <td><script>danhSachStk[0]._soTienGui</script></td>
+    </tr>
+    <tr>
+        <td><script>danhSachStk[1]._maSo</script></td>
+        <td><script>danhSachStk[1]._loaiTietKiem</script></td>
+        <td><script>danhSachStk[1]._hoTenKhachHang</script></td>
+        <td><script>danhSachStk[1]._CMND</script></td>
+        <td><script>danhSachStk[1]._ngayMoSo</script></td>
+        <td><script>danhSachStk[1]._soTienGui</script></td>
+    </tr>
+</table>
+</body>
+</html>
